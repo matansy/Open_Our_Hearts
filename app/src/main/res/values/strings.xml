@@ -7,4 +7,7 @@
     <string name="ask_for_help_str">בקשת סיוע</string>
     <string name="ask_to_donate_str">התנדבות</string>
     <string name="action_settings">Settings</string>
+    <string name="bank_str">בנק</string>
+    <string name="Bit_str">ביט</string>
+    <string name="Paybocks_str">פייבוקס</string>
 </resources>
