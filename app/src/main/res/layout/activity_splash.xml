@@ -19,14 +19,16 @@
         <ImageView
             android:id="@+id/splashscreenim"
             android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
+            android:layout_height="648dp"
             android:layout_gravity="center"
             android:src="@drawable/logo" />
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Hello World, splash" />
+        <ProgressBar
+            android:id="@+id/progressBar4"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
 
     </LinearLayout>
 
