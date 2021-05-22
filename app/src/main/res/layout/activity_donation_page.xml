@@ -7,13 +7,13 @@
     tools:context=".Donation_page">
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button2"
+        android:id="@+id/moneyDonationButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="245dp"
         android:layout_marginEnd="55dp"
-        android:text="Button"
+        android:text="תרומת כספית"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/Bit_button"
@@ -28,7 +28,7 @@
         android:layout_marginEnd="60dp"
         android:drawableTop="@mipmap/bit_icon"
         android:text="@string/Bit_str"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/moneyDonationButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,7 +55,7 @@
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/paybox_button"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/moneyDonationButton" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bankButton"

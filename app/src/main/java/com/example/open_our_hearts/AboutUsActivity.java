@@ -59,7 +59,10 @@ public class AboutUsActivity extends AppCompatActivity {
         });
 
         uploadButton.setOnClickListener(v -> {
-            //TODO: google form
+            Intent intent = new Intent(AboutUsActivity.this, siteContentShow.class);
+            intent.putExtra("siteURL", "https://www.matara.pro/nedarimplus/online/?mosad=7003678");
+            intent.putExtra("scroll", 1558);
+            startActivity(intent);
         });
     }
 }
