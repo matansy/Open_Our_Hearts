@@ -7,6 +7,17 @@
     tools:context=".MainActivity"
     android:background="@drawable/background">
 
+    <ImageView
+        android:id="@+id/overview_image"
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:layout_marginTop="24dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="TODO" />
 
     <Button
         android:id="@+id/whoWeAreBtn"
