@@ -9,11 +9,7 @@ import android.widget.Button;
 
 public class AboutUsActivity extends AppCompatActivity {
 
-    Button odotButton;
-    Button ktavotButton;
-    Button fieldButton;
-    Button futureActButton;
-    Button galleryButton;
+    Button odotButton, ktavotButton, fieldButton, futureActButton, galleryButton, uploadButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +21,7 @@ public class AboutUsActivity extends AppCompatActivity {
         fieldButton = findViewById(R.id.fieldActvBtn);
         futureActButton = findViewById(R.id.FutureActvBtn);
         galleryButton = findViewById(R.id.galleryBtn);
+        uploadButton = findViewById(R.id.uploadBtn);
 
         odotButton.setOnClickListener(v -> {
             Intent intent = new Intent(AboutUsActivity.this, siteContentShow.class);
@@ -61,5 +58,11 @@ public class AboutUsActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        uploadButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }
