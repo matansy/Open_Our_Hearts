@@ -58,11 +58,8 @@ public class AboutUsActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        uploadButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
+        uploadButton.setOnClickListener(v -> {
+            //TODO: google form
         });
     }
 }
