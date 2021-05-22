@@ -19,17 +19,18 @@
         app:srcCompat="@drawable/logo"
         android:contentDescription="TODO" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/whoWeAreBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="79dp"
         android:layout_marginTop="184dp"
+        android:background="@drawable/costum_button"
         android:text="@string/who_we_are_str"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/donateBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,7 +41,7 @@
         app:layout_constraintStart_toEndOf="@+id/whoWeAreBtn"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/contactUsBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,7 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/whoWeAreBtn" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/askForHelpBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,7 +63,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/donateBtn" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -72,7 +73,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/volunteerBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -81,5 +82,7 @@
         android:text="@string/ask_to_donate_str"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
