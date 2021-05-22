@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     Button aboutUsBtn;
     Button askForHelpBtn;
     Button askToVolunteer;
+    Button contactUs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         aboutUsBtn = findViewById(R.id.whoWeAreBtn);
         askForHelpBtn = findViewById(R.id.askForHelpBtn);
         askToVolunteer = findViewById(R.id.volunteerBtn);
+        contactUs = findViewById(R.id.contactUsBtn);
         aboutUsBtn.setOnClickListener(v ->
                 startActivity(new Intent(getApplicationContext(), AboutUsActivity.class)));
         askForHelpBtn.setOnClickListener(v ->{Intent intent = new Intent(MainActivity.this, siteContentShow.class);
@@ -31,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("siteURL", "https://api.whatsapp.com/send?phone=972545830076");
             //intent.putExtra("scroll", 1558);
             startActivity(intent);});
+
+        contactUs.setOnClickListener(v ->
+                startActivity(new Intent(getApplicationContext(), contact_page.class)));
 
 
     }
