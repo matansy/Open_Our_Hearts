@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Open_Our_Hearts">
-        <activity android:name=".siteContentShow"></activity>
+        <activity android:name=".AskForHelpActivity"></activity>
+        <activity android:name=".siteContentShow" />
         <activity android:name=".contact_page" />
         <activity android:name=".AboutUsActivity" />
         <activity android:name=".MainActivity">
