@@ -16,6 +16,8 @@ public class siteContentShow extends AppCompatActivity {
         setContentView(R.layout.activity_site_content_show);
 
         String url = getIntent().getExtras().getString("siteURL");
+        int scroll = getIntent().getExtras().getInt("scroll");
+
         siteView = (WebView) findViewById(R.id.siteShow);
         siteView.getSettings().setJavaScriptEnabled(true);
         siteView.loadUrl(url);
@@ -25,6 +27,11 @@ public class siteContentShow extends AppCompatActivity {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
                 return true;
+            }
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                //use the param "view", and call getContentHeight in scrollTo
+                view.scrollTo(0, scroll);
             }
         });
     }
