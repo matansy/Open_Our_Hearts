@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         askForHelpBtn.setOnClickListener(v ->{Intent intent = new Intent(MainActivity.this, siteContentShow.class);
             intent.putExtra("siteURL", "https://docs.google.com/forms/d/1Ccc4kNLcCZTKQm3KO59pYPkJDvivz0gTVqcqMF9jXko/viewform?ts=5fa1aac3&edit_requested=true");
-            //intent.putExtra("scroll", 1558);
+            intent.putExtra("scroll", 615);
             startActivity(intent);});
 
 
@@ -52,15 +52,34 @@ public class MainActivity extends AppCompatActivity {
                 boolean installed = isAppInstalled("com.whatsapp");
 
                 if(installed) {
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse("https://api.whatsapp.com/send?phone=" + donatePhoneNumber));
-                    startActivity(intent);
+                    Intent intentWhatsapp = new Intent("android.intent.action.MAIN");
+                    intentWhatsapp.setAction(Intent.ACTION_VIEW);
+                    String url = "https://api.whatsapp.com/send?phone=" + "+972543372873";
+                    intentWhatsapp.setData(Uri.parse(url));
+                    intentWhatsapp.setPackage("com.whatsapp");
+                    startActivity(intentWhatsapp);
                 }
                 else{
                     Toast.makeText(MainActivity.this, "Whatsapp is not installed!",Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
+//        volunteerBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                boolean installed = isAppInstalled("com.whatsapp");
+//
+//                if(installed) {
+//                    Intent intent = new Intent(Intent.ACTION_VIEW);
+//                    intent.setData(Uri.parse("https://api.whatsapp.com/send?phone=" + donatePhoneNumber));
+//                    startActivity(intent);
+//                }
+//                else{
+//                    Toast.makeText(MainActivity.this, "Whatsapp is not installed!",Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
 
     }
 
