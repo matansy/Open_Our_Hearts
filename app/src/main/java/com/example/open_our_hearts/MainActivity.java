@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button askForHelpBtn;
     Button volunteerBtn;
     Button contactUs;
+    Button donationBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +26,17 @@ public class MainActivity extends AppCompatActivity {
         askForHelpBtn = findViewById(R.id.askForHelpBtn);
         volunteerBtn = findViewById(R.id.volunteerBtn);
         contactUs = findViewById(R.id.contactUsBtn);
+        donationBtn = findViewById(R.id.donateBtn);
 
-        String donatePhoneNumber = "972543372873";//972545830076
-        String text = "אני פונה בקשר להתנדבות בארגון פותחים את הלב ונותנים באהבה,שמי ";
+        String donatePhoneNumber = "+972543372873";//972545830076
+        String whatsappDefaultText = "אני פונה בקשר להתנדבות בארגון פותחים את הלב ונותנים באהבה,שמי ";
 
         aboutUsBtn.setOnClickListener(v ->
                 startActivity(new Intent(getApplicationContext(), AboutUsActivity.class)));
+
+        donationBtn.setOnClickListener(v ->
+                startActivity(new Intent(getApplicationContext(), AboutUsActivity.class)));
+
         askForHelpBtn.setOnClickListener(v ->{Intent intent = new Intent(MainActivity.this, siteContentShow.class);
             intent.putExtra("siteURL", "https://docs.google.com/forms/d/1Ccc4kNLcCZTKQm3KO59pYPkJDvivz0gTVqcqMF9jXko/viewform?ts=5fa1aac3&edit_requested=true");
             //intent.putExtra("scroll", 1558);
@@ -47,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if(installed) {
                     Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse("http://api.whatsapp.com/send?=" + donatePhoneNumber + text));
+                    intent.setData(Uri.parse("https://api.whatsapp.com/send?phone=" + donatePhoneNumber));
                     startActivity(intent);
                 }
                 else{
@@ -55,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
 
     }
 
